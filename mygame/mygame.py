@@ -7,10 +7,13 @@ while (p-m+3)%3==0:
     print("手を入力してください") 
     print("0:グー 1:チョキ 2:パー")
     
-    try:
-        p=int(input("ジャンケン..."))
-    except ValueError:
-        print('ちゃんと入力してくれ')
+    flag=False
+    while flag==False:
+        try:
+            p=int(input("ジャンケン..."))
+            flag=True
+        except ValueError:
+            print('ちゃんと入力してくれ')
     
 
     player=hands[p]
